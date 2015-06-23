@@ -45,6 +45,7 @@
 				<br>
 				<div class="label">
 					<label> Select your online bank login:  &nbsp;</label>
+				</div>
 					<select id="selectBank">
 					<!-- use ng-repeat here -->
 						<option value="https://ipn.paymentus.com/epd/stde/lhud"> Paymentus </option>
@@ -55,10 +56,10 @@
 
 					<br>
 					<br>
-
+					<!--button style="display: inline;" onclick="goToBankLogin()"> Go to Bank Login </button--> 
 					<a href="#login" onclick="goToBankLogin()" class="btn btn3" title="Go to bank" tabindex="3">Log in into online banking website</a>
-					<a href="#remove" id="save" class="btn btn4" ng-click="showConfirm($event)" title="Cancel" tabindex="2" onclick="closeWindow()">Cancel</a>
-				</div>	
+					<a href="#remove" id="save" class="btn btn4" ng-click="showConfirm($event)" title="Cancel" tabindex="2" onclick="closeWindow()">CANCEL</a>
+
 			</div>
 		</div>
 	</div>
