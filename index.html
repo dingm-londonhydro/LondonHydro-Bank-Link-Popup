@@ -1,0 +1,74 @@
+<link href="./popup.css" rel="stylesheet">
+
+<style>
+.popup-content {
+	padding: 2em;
+	line-height: 2em;
+}
+
+</style>
+<div class="popup">
+<button onclick="showBankOnlinePayment()" class="btn btn1">With Online Banking </button>
+</div>
+
+<br>
+<br>
+
+<dialog id="bankWindow">
+	<div class="popup">
+		<header class="popup-heading single-heading">
+			<a href="#close" class="close" title="Close" tabindex="4"></a>
+			<h2 class="ng-binding">ONLNE BANKING PAYMENT</h2>
+		</header>
+
+		<div class="popup-content account-content">
+			<div class="row input">
+				<div class="label"> <!-- use ng-repeat here -->
+					<label> Account Number: </label>
+					<span id="accountNum"> </span> <!-- create a controller for here -->
+				</div>
+				<br>
+				<div class="label">
+					<label> Total Amount due: </label>
+					<span id="amountDue"> </span>
+				</div>
+				<br>
+				<div class="label">
+					<label> Due Date: </label>
+					<span id="dueDate"> </span>
+				</div>
+				<br>
+				<div class="label">
+					<label> Select your online bank login: </label>
+					<select>
+					<!-- use ng-repeat here -->
+					</select>
+
+					<br>
+					<br>
+					<!--button style="display: inline;" onclick="goToBankLogin()"> Go to Bank Login </button--> 
+					<a href="#cancel" class="btn btn3" title="Go to bank" tabindex="3">LOGIN</a>
+					<a href="#remove" class="btn btn4" title="Cancel" tabindex="2" onclick="closeWindow()">CANCEL</a>
+				</div>	
+			</div>
+		</div>
+	</div>
+</dialog>
+
+<script>
+		var bankWindow = document.getElementById('bankWindow');
+		
+		function showBankOnlinePayment() {
+			bankWindow.showModal();
+
+		}
+
+		function closeWindow() {
+			bankWindow.close();
+		}
+
+		function goToBankLogin() {
+			// will have to read the options, use name and value of the option
+			// gets url from selections
+		}
+		</script>
