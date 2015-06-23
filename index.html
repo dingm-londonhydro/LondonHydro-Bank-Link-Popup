@@ -17,7 +17,7 @@
 <dialog id="bankWindow">
 	<div class="popup">
 		<header class="popup-heading single-heading">
-			<a href="#close" class="close" title="Close" tabindex="4"></a>
+			<a href="#close" onclick="closeWindow()" class="close" title="Close" tabindex="4"></a>
 			<h2 class="ng-binding">ONLNE BANKING PAYMENT</h2>
 		</header>
 
@@ -48,7 +48,7 @@
 					<br>
 					<!--button style="display: inline;" onclick="goToBankLogin()"> Go to Bank Login </button--> 
 					<a href="#cancel" class="btn btn3" title="Go to bank" tabindex="3">LOGIN</a>
-					<a href="#remove" class="btn btn4" title="Cancel" tabindex="2" onclick="closeWindow()">CANCEL</a>
+					<a href="#remove" id="save" class="btn btn4" ng-click="showConfirm($event)" title="Cancel" tabindex="2" onclick="closeWindow()">CANCEL</a>
 				</div>	
 			</div>
 		</div>
